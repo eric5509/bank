@@ -10,7 +10,6 @@ export default function SearchByPropertyType() {
                 </div>
             ))}
         </div>
-        
     </main>
   )
 }
