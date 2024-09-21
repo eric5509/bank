@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins,Montserrat } from "next/font/google";
 import "./globals.css";
-import Nav from "@/Components/Nav";
+import Sidenav from "@/Components/Sidenav/Sidenav";
+import Topnav from "@/Components/TopNav/Topnav";
+import BottomNav from "@/Components/BottomNav/BottomNav";
+import AppProvider from "@/redux/provider/Provider";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -20,9 +23,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <Nav />
-        <main className={font.className}>{children}</main>
+      <body className={font.className}>
+        <AppProvider>
+          <main className="h-screen grid grid-cols-1 md:grid-cols-[260px_1fr]">
+            <div className="hidden overflow-y-auto md:block bg-blue-50 h-full">
+              <Sidenav />
+            </div>
+            <div className="flex flex-col overflow-y-auto">
+              <div className="h-20 w-full">
+                <Topnav />
+              </div>
+              <div className="flex-1 w-full overflow-y-auto">{children}</div>
+            </div>
+          </main>
+          <BottomNav />
+        </AppProvider>
       </body>
     </html>
   );
