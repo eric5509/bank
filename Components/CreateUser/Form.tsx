@@ -128,35 +128,35 @@ export default function Form() {
           error={errors.firstName}
           name="firstName"
           value={values.firstName}
-          title="First Name"
+          label="First Name"
           onChange={onChange}
         />
         <Input
           error=""
           name="middleName"
           value={values.middleName}
-          title="Middle Name(optional)"
+          label="Middle Name(optional)"
           onChange={onChange}
         />
         <Input
           error={errors.lastName}
           name="lastName"
           value={values.lastName}
-          title="Last Name"
+          label="Last Name"
           onChange={onChange}
         />
         <Input
           error={errors.username}
           name="username"
           value={values.username}
-          title="Username"
+          label="Username"
           onChange={onChange}
         />
         <Input
           error={errors.password}
           name="password"
           value={values.password}
-          title="Password"
+          label="Password"
           onChange={onChange}
           password={true}
         />
@@ -164,35 +164,35 @@ export default function Form() {
           error={errors.occupation}
           name="occupation"
           value={values.occupation}
-          title="Occupation"
+          label="Occupation"
           onChange={onChange}
         />
         <Input
           error={errors.phoneNumber}
           name="phoneNumber"
           value={values.phoneNumber}
-          title="Phone Number"
+          label="Phone Number"
           onChange={onChange}
         />
         <Input
           error={errors.emailAddress}
           name="emailAddress"
           value={values.emailAddress}
-          title="Email Address"
+          label="Email Address"
           onChange={onChange}
         />
         <Input
           error={errors.dateOfBirth}
           name="dateOfBirth"
           value={values.dateOfBirth}
-          title="Date of Birth(dd-mm-yy)"
+          label="Date of Birth(dd-mm-yy)"
           onChange={onChange}
         />
         <Select
           error={errors.maritalStatus}
           name="maritalStatus"
           value={values.maritalStatus}
-          title="Marital Status"
+          label="Marital Status"
           options={["", "Single", "Married"]}
           onChange={onChange}
         />
@@ -200,7 +200,7 @@ export default function Form() {
           error={errors.gender}
           name="gender"
           value={values.gender}
-          title="Gender"
+          label="Gender"
           options={["", "Male", "Female", "Other"]}
           onChange={onChange}
         />
@@ -208,14 +208,14 @@ export default function Form() {
           error={errors.residentialAddress}
           name="residentialAddress"
           value={values.residentialAddress}
-          title="Residential Address"
+          label="Residential Address"
           onChange={onChange}
         />
         <Select
           error={errors.accountType}
           name="accountType"
           value={values.accountType}
-          title="Account Type"
+          label="Account Type"
           options={["", "Checking"]}
           onChange={onChange}
         />
@@ -223,35 +223,35 @@ export default function Form() {
           error={errors.registrationDate}
           name="registrationDate"
           value={values.registrationDate}
-          title="Registration Date (dd-mm-yy)"
+          label="Registration Date (dd-mm-yy)"
           onChange={onChange}
         />
         <Input
           error={errors.totalBalance}
           name="totalBalance"
           value={values.totalBalance}
-          title="Total Balance"
+          label="Total Balance"
           onChange={onChange}
         />
         <Input
           error={errors.availableBalance}
           name="availableBalance"
           value={values.availableBalance}
-          title="Available Balance"
+          label="Available Balance"
           onChange={onChange}
         />
         <Input
           error={errors.accountNumber}
           name="accountNumber"
           value={values.accountNumber}
-          title="Select Account Number"
+          label="Select Account Number"
           onChange={onChange}
         />
         <Select
           error={errors.accountCurrency}
           name="accountCurrency"
           value={values.accountCurrency}
-          title="Account Currency"
+          label="Account Currency"
           options={["", "Dollar", "Pound", "Euro"]}
           onChange={onChange}
         />
@@ -259,28 +259,28 @@ export default function Form() {
           error={errors.cotCode}
           name="cotCode"
           value={values.cotCode}
-          title="COT Code"
+          label="COT Code"
           onChange={onChange}
         />
         <Input
           error={errors.taxCode}
           name="taxCode"
           value={values.taxCode}
-          title="Tax Code"
+          label="Tax Code"
           onChange={onChange}
         />
         <Input
           error={errors.imfCode}
           name="imfCode"
           value={values.imfCode}
-          title="IMF Code"
+          label="IMF Code"
           onChange={onChange}
         />
         <Input
           error={errors.loginPin}
           name="loginPin"
           value={values.loginPin}
-          title="Login PIN / ATM PIN"
+          label="Login PIN / ATM PIN"
           password={true}
           onChange={onChange}
         />
@@ -289,7 +289,7 @@ export default function Form() {
           name="domesticTransferPin"
           value={values.domesticTransferPin}
           password={true}
-          title="Domestic Transfer PIN"
+          label="Domestic Transfer PIN"
           onChange={onChange}
         />
       </div>

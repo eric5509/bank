@@ -10,10 +10,7 @@ import Card from "./Card";
 import QuickLinks from "./QuickLinks";
 import { useState } from "react";
 import { useAppSelector } from "@/redux/store/hook";
-import { variant } from "@/lib/variants";
-import DebitUserDropdown from "./DebitUserDropdown";
-import CreditUserDropdown from "./CreditUserDropdown";
-import AddCreditDebithistory from "./AddCreditDebitHistory";
+import { variant1 } from "@/lib/variants";
 import Dropdown from "./Dropdown";
 
 export default function () {
@@ -53,7 +50,7 @@ export default function () {
   const [opened, setOpened] = useState(false);
   return (
     <motion.div
-      variants={variant}
+      variants={variant1}
       initial="initial"
       animate="animate"
       className={`p-4 ${

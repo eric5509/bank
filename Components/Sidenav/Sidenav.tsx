@@ -30,7 +30,7 @@ export default function Sidenav() {
     {
       icon: <AiOutlineCreditCard size={20} />,
       title: "Credit Cards",
-      link: "/",
+      link: "credit-cards",
     },
     {
       icon: <MdOutlinePayments size={20} />,

@@ -5,7 +5,8 @@ import { BsEye, BsEyeSlash } from "react-icons/bs";
 
 type Props = {
   error: string;
-  title: string;
+  label: string;
+  leaveBlack?: boolean
   value: string;
   name: string;
   password?: boolean;
@@ -15,7 +16,7 @@ type Props = {
 export default function Input({
   error,
   onChange,
-  title,
+  label,
   value,
   name,
   password,
@@ -23,8 +24,8 @@ export default function Input({
   const [isPassword, setIsPassword] = useState(true);
   const darkmode = useAppSelector(state => state.darkmode.value)
   return (
-    <div>
-      <p className="font-semibold text-sm mb-2">{title}</p>
+    <div className={`${darkmode ? 'text-white' : 'text-black'} `}>
+      <p className={`font-semibold duration-300 text-sm mb-2`}>{label}</p>
       <div
         className={`input bg-white ${
           error ? "border-red-500" : `${darkmode ? 'border-white' : 'border-gray-300'}`
@@ -36,7 +37,7 @@ export default function Input({
           type={password ? `${isPassword ? "password" : "text"}` : "text"}
           onChange={onChange}
           autoComplete="off"
-          className="h-full text-black rounded-lg w-full px-2 bg-transparent outline-none border-none text-sm"
+          className={`h-full text-black rounded-lg w-full px-2 bg-transparent outline-none border-none text-sm`}
         />
         {password && (
           <div className="">

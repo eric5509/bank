@@ -1,14 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
 import Form from "./Form";
-import { variant } from "@/lib/variants";
+import { variant, variant1 } from "@/lib/variants";
 import { useAppSelector } from "@/redux/store/hook";
 
 export default function Base() {
   const darkmode = useAppSelector((state) => state.darkmode.value);
   return (
     <motion.div
-      variants={variant}
+      variants={variant1}
       initial="initial"
       animate="animate"
       className={`p-5 pb-8 duration-300 ${

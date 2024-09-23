@@ -2,7 +2,7 @@ import { useAppSelector } from "@/redux/store/hook";
 
 type Props = {
   error: string;
-  title: string;
+  label: string;
   value: string;
   name: string;
   onChange: (e: any) => void;
@@ -12,7 +12,7 @@ type Props = {
 export default function Select({
   error,
   onChange,
-  title,
+  label,
   value,
   name,
   options,
@@ -20,7 +20,7 @@ export default function Select({
   const darkmode = useAppSelector((state) => state.darkmode.value);
   return (
     <div>
-      <p className="font-semibold text-sm mb-2">{title}</p>
+      <p className={`font-semibold text-sm mb-2 duration-300 text-black'}`}>{label}</p>
       <div
         className={`input bg-white ${
           error

@@ -62,19 +62,9 @@ export const ValidateForm = ({ values, setErrors }: Props) => {
   setErrors(newErrors);
   return Object.values(newErrors).every((error) => error === "");
 };
-
 type Props2 = {
   values: TValues;
 };
-export const SubmitForm = async ({ values }: Props2): Promise<boolean> => {
-  let a = 5;
-  await new Promise<void>((resolve) => {
-    setTimeout(() => {
-      a = 10;
-      resolve(); 
-    }, 3000);
-  });
-
-  if (a > 5) return true; 
+export const SubmitForm = async ({ values }: Props2) => {
   return false;
 };
